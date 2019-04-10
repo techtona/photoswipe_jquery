@@ -1,2 +1,4 @@
 ## Adding JQuery into PhotoSwipe
-[PhotoSwipe](https://github.com/dimsemenov/photoswipe)
+#####Source : 
+1. [PhotoSwipe](https://github.com/dimsemenov/photoswipe)
+2. [Jquery](https://github.com/jquery/jquery)
