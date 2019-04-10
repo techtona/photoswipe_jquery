@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>viewer</title>
+    <link rel="stylesheet" href="/dist/photoswipe.css">
+    <link rel="stylesheet" href="/dist/default-skin/default-skin.css">
+    <script src="/dist/photoswipe.min.js"></script>
+    <script src="/dist/photoswipe-ui-default.min.js"></script>
+    <script src="/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td><a class="show" href="##" rel="https://placekitten.com/1200/900">kucing1</a></td>
+    </tr>
+    <tr>
+        <td><a class="show" href="##" rel="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCj433jD_iMvoKgSCjAIwvK27tdBQQLqm0Xzz25i3yDILHdgxTbw">nemo</a></td>
+    </tr>
+    <tr>
+        <td><a class="show" href="##" rel="https://placekitten.com/1200/900">kucing3</a></td>
+    </tr>
+    <tr>
+        <td><a class="show" href="##" rel="https://placekitten.com/1200/900">kucing4</a></td>
+    </tr>
+</table>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    $(function () {
+        $(".show").on('click', function (e) {
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+            var items = [
+                {
+                    src: e.target.rel,
+                    w: 1200,
+                    h: 900
+                }
+            ];
+
+            var options = {
+                index: 0 // start at first slide
+            };
+            var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        });
+    });
+
+</script>
+</body>
+</html>
