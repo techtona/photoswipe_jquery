@@ -70,7 +70,9 @@
   background-position: 0 -44px; }
 
 .pswp__button--share {
-  background-position: -44px -44px; }
+  transform: rotate(90deg);
+  background-position: -44px -44px;
+}
 
 .pswp__button--fs {
   display: none; }

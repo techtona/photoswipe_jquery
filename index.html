@@ -6,6 +6,7 @@
     <script src="/dist/photoswipe.min.js"></script>
     <script src="/dist/photoswipe-ui-default.min.js"></script>
     <script src="/jquery-3.3.1.min.js"></script>
+    <script src="/font-awesome/css/font-awesome.min.css"></script>
 </head>
 <body>
 <table>
@@ -38,10 +39,9 @@
                 <div class="pswp__counter"></div>
 
                 <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
                 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
                 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <button class="pswp__button pswp__button--share" onclick="call_download($(this))" title="Download"></button>
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">
                         <div class="pswp__preloader__cut">
@@ -86,6 +86,12 @@
             gallery.init();
         });
     });
+
+    function call_download() {
+        var api = '';
+        var url = document.URL;
+        fetch(api+'?image='.url);
+    }
 
 </script>
 </body>
